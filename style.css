@@ -11,7 +11,6 @@
     align-items: flex-start;
     gap: 2px;
     margin: 0;
-    margin: 0;
     font-size: 18px;
     font-style: normal; 
     text-align: left;
@@ -65,6 +64,8 @@
 
 .header_logo {
     display: block;
+    width: 148px;
+    height: 105px;
 }
 
 .header__menu a,
@@ -187,7 +188,7 @@ address a {
 .lot_2 {
     margin: 0 10%;
     padding: 10%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/lot_2.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./images/lot_2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -298,7 +299,7 @@ address a {
     font-style: normal;
 }
 
-.footer__menu{
+.footer__menu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -326,5 +327,9 @@ address a {
     padding-right: 10%;
     list-style: none;
 }
+
+.footer__social img {
+    height: 48px;
+    width: 48px;
+}
 /* конец footer*/
-/* новый коммит*/
