@@ -26,16 +26,24 @@
             <a class="header_logo" href="#glavnaya">
                 <img src="./images/logo.svg" alt="Логотип ОНО ТЕБЕ НАДО">
             </a>
-            <address class="header__address address">
-                <a href="tel:+99995555555">
-                    +99995555555
-                </a>
-                <a href="mailto:info@sobaka.ge">
-                    info@sobaka.ge
-                </a>
-                <p>
-                    наб. Принсенграхт 263-265, Амстердам
-                </p>
+            <address class="header__address">
+                <ul>
+                    <li>
+                        <a href="tel:+99995555555">
+                            +99995555555
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@sobaka.ge">
+                            info@sobaka.ge
+                        </a>
+                    </li>
+                    <li>
+                        <p>
+                            наб. Принсенграхт 263-265, Амстердам
+                        </p>
+                    </li>
+                </ul>
             </address>
         </header>
         <main>
@@ -60,8 +68,9 @@
                     </div>
                 </div>
             </section>
-            <section> <!--Лоты-->
-                <h2 class="lots_heading" id="loty">
+            <section id="loty"> <!--Лоты-->
+                <div class="lots">
+                <h2 class="lots_heading">
                     Лоты
                 </h2>
                 <ul class="lots_list">
@@ -105,12 +114,13 @@
                 <a class="lots_button" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZwh4H0d4rSLgNtSQGGl4Qshz9leSSOObQC23-6JlFc7jZoejuJSymtjO0&s=10">
                     посмотреть больше
                 </a>
+                </div>
             </section>
             <section class="about" id="ob-aukcione"> <!--Об аукционе-->
                 <div> <!-- первая колонка с логотипом-->
                     <img class="logo_about" src="./images/logo_about.svg" alt="логотип">
                 </div>
-                <div>  <!-- вторая колонка с заголовком и текстом-->
+                <div class="about_column">  <!-- вторая колонка с заголовком и текстом-->
                     <h2 class="h2_about">  <!--Заголовок-->
                         Об аукционе
                     </h2>
@@ -126,7 +136,7 @@
             </section>
         </main>
         <footer class="footer">
-            <address class="footer__address address">
+            <address class="footer__contacts">
                 <a href="tel:+9995555555">
                     +9 999 555 5555
                 </a>
@@ -158,14 +168,14 @@
             </nav>
             <ul class="footer__social">
                 <li>
-                    <a href="https://vk.ru/">
-                        <img src="./images/VK.svg" alt="Вконтакте">
-                    </a>
-                </li>
-                <li>
                     <a href="https://www.youtube.com/">
                         <img src="./images/YouTube.svg" alt="YouTube">
 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vk.ru/">
+                        <img src="./images/VK.svg" alt="Вконтакте">
                     </a>
                 </li>
                 <li>
