@@ -184,7 +184,7 @@ address a {
     text-transform: uppercase;
 }
 
-.lots_list{
+.lots_list {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
