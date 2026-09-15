@@ -10,18 +10,15 @@
 
 /* начало header*/
 .header {
+    display: inline-grid;
+    grid-template-columns: 476px 148px  476px;
     width: 1100px;
     height: 293px;
 }
 
 .header__menu {
-    position: absolute;
-    width: 391.48px;
-    height: 22px;
-    top: 133px;
-    left: 50px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     text-decoration-thickness: 1px;
@@ -45,11 +42,14 @@
 }
 
 .header_logo {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_logo img {
     width: 148px;
     height: 105px;
-    top: 92px;
-    left: 478px;
 }
 
 .header__menu a,
@@ -58,11 +58,9 @@ address a {
 }
 
 .header__address {
-    position: absolute;
-    width: 240px;
-    height: 98px;
-    top: 95px;
-    left: 810px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration-thickness: 1px;
     text-decoration-skip-ink: none;
     text-underline-offset: 3px;
@@ -71,6 +69,7 @@ address a {
 
 .header__address ul {
     list-style: none;
+    width: 200px;
 }
 
 /* конец header*/
@@ -80,63 +79,80 @@ address a {
 /* начало cover*/
 .cover {
     color: white;
-    position: absolute;
+    position:relative;
     Width: 1100px;
     Height: 757px;
-    Top: 293px;
-    left: 0;
     text-transform: uppercase;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/0ebc4c3a92bfb672f477e421e7738fd6416ff19b.jpg');
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.cover_ono {
+.title {
     position: absolute;
-    Width: 286px;
-    Height: 115px;
-    Top: 165px;
-    Left: 50px;
+    width: 1000px;
+    height: 385px;
+    top: 165px;
+    left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cover_ono {
+    grid-column: span 3 / span 3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     font-size: 100px;
     letter-spacing: 30px;
 }
 
 .cover_tebe {
-    position: absolute;
-    Width: 339px;
-    Height: 115px;
-    Top: 300px;
-    Left: 380.5px;
+    grid-column: span 3 / span 3;
+    grid-row-start: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 100px;
     letter-spacing: 30px;
 }
 
 .cover_nado {
-    position: absolute;
-    Width: 387px;
-    Height: 115px;
-    Top: 435px;
-    Left: 663px;
+    grid-column: span 3 / span 3;
+    grid-row-start: 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
     font-size: 100px;
     letter-spacing: 30px;
 }
 
-.description p {
+.description {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     position: absolute;
-    Width: 637px;
-    Height: 28px;
-    Top: 668px;
+    Width: 1000px;
+    Height: 51px;
+    Top: 656px;
     Left: 50px;
+}
+
+.description p {
+    grid-column: span 3 / span 3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     font-size: 22px;
-    word-spacing: 19px;
+    word-spacing: 15px;
 }
 
 .description button {
-    position: absolute;
-    Width: 256px;
-    Height: 51px;
-    Top: 656px;
-    Left: 794px;
+    grid-column-start: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 22px;
     border: 2px solid white;
     color: white;
@@ -146,42 +162,48 @@ address a {
 /* конец cover*/
 
 /* начало lots*/
-.lots_list {
-    list-style: none;
+.loty {
+    position: relative;
+    width: 1100px;
+    height: 1023px;
 }
 
 .lots {
     position: absolute;
     Width: 1052px;
     Height: 723px;
-    Top: 1230px;
-    Left: 24px;
+    top: 180px;
+    left: 24px;
 }
 
 .lots_heading {
-    position: absolute;
-    Width: 121px;
-    Height: 47px;
-    Left: 40px;
+    padding-left: 40px;
+    height: 74px;
+    display: flex;
     font-size: 40px;
     text-transform: uppercase;
 }
 
+.lots_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    list-style: none;
+}
+
 .lot_1 {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/lot_1.jpg");
     background-position: center;
-    position: absolute;
-    Width: 334px;
-    Height: 596px;
-    Top: 74px;
+    width: 334px;
+    height: 596px;
 }
 
 .lot_1 h3 {
     position: absolute;
-    Width: 254px;
-    Height: 82px;
     Top: 48px;
     left: 40px;
+    right: 40px;
     font-size: 22px;
     text-transform: uppercase;
     color: white;
@@ -190,23 +212,20 @@ address a {
 
 .lot_1 p {
     position: absolute;
-    Width: 254px;
-    Height: 144px;
     Top: 404px;
     left: 40px;
+    right: 40px;
     font-size: 20px;
     color: white;
     text-decoration: none;
 }
 
 .lot_2 {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/lot_2.jpg");
     background-position: center;
-    position: absolute;
-    Width: 334px;
-    Height: 596px;
-    Top: 74px;
-    left: 359px;
+    width: 334px;
+    height: 596px;
 }
 
 .lot_2 h3 {
@@ -215,6 +234,7 @@ address a {
     Height: 110px;
     Top: 48px;
     left: 40px;
+    right: 40px;
     font-size: 22px;
     text-transform: uppercase;
     color: white;
@@ -227,19 +247,18 @@ address a {
     Height: 360px;
     Top: 188px;
     left: 40px;
+    right: 40px;
     font-size: 20px;
     color: white;
     text-decoration: none;
 }
 
 .lot_3 {
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/lot_3.jpg");
     background-position: center;
-    position: absolute;
-    Width: 334px;
-    Height: 596px;
-    Top: 74px;
-    left: 718px;
+    width: 334px;
+    height: 596px;
 }
 
 .lot_3 h3 {
@@ -248,6 +267,7 @@ address a {
     Height: 110px;
     Top: 48px;
     left: 40px;
+    right: 40px;
     font-size: 22px;
     text-transform: uppercase;
     color: white;
@@ -260,17 +280,17 @@ address a {
     Height: 264px;
     Top: 284px;
     left: 40px;
+    right: 40px;
     font-size: 20px;
     color: white;
     text-decoration: none;
 }
 
 .lots_button {
-    position: absolute;
-    Width: 192px;
-    Height: 25px;
-    Top: 700px;
-    left: 40px;
+    padding-left: 40px;
+    align-items: end;
+    height: 53px;
+    display: flex;
     font-size: 20px;
     color: black;
     text-decoration-thickness: 1px;
@@ -280,54 +300,74 @@ address a {
 }
 
 /* конец lots*/
+
 /* начало about*/
+.about_section {
+    position: relative;
+    width: 1100px;
+    height: 775px;
+}
+
 .about {
     position: absolute;
     Width: 1052px;
     Height: 595px;
-    Top: 2073px;
     left: 24px;
+    display: grid;
+    grid-template-columns: 359px 693px;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .logo_about {
-    position: absolute;
-    Width: 240px;
-    Height: 240px;
-    Top: 35px;
-    left: 47px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    Width: 359px;
+    Height: 595px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
-.about_column {
-    position: absolute;
-    Width: 693px;
-    Height: 449px;
-    Top: 133px;
-    left: 359px;
+.logo_about img {
+    width: 240px;
+    height: 240px;
 }
 
 .h2_about {
-    position: absolute;
-    Width: 291px;
-    Height: 47px;
-    Top: 3px;
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    Width: 693px;
+    Height: 198px;
     font-size: 40px;
     text-transform: uppercase;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+    padding-right: 10px;
 }
 
 .p1_about {
-    position: absolute;
-    Width: 688px;
-    Height: 120px;
-    Top: 150px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    Width: 693px;
+    Height: 198px;
     font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
 }
 
 .p2_about {
-    position: absolute;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
     Width: 693px;
-    Height: 168px;
-    Top: 294px;
+    Height: 198px;
     font-size: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 24px;
 }
 
 /* конец about*/
@@ -336,11 +376,11 @@ address a {
 
 /* начало footer*/
 .footer {
-    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     Width: 1100px;
     Height: 180px;
-    Top: 2848px;
-    left: 0;
 }
 
 .footer a {
@@ -354,11 +394,8 @@ address a {
 .footer__contacts {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    position: absolute;
-    Width: 264.57px;
-    Height: 98px;
-    left: 50px;
+    justify-content: start;
+    align-items: center;
     text-decoration-thickness: 1px;
     text-decoration-skip-ink: none;
     text-underline-offset: 3px;
@@ -367,12 +404,11 @@ address a {
 .footer__menu {
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
-    position: absolute;
-    Width: 163.9px;
-    Height: 64px;
-    top: 1px;
-    left: 468.6px;
+}
+
+.footer ul {
     list-style: none;
 }
 
@@ -382,16 +418,11 @@ address a {
 
 .footer__social {
     display: grid;
-
-    grid-template-columns: 48px 48px 48px; /*иначе автотест не пускает*/
-
+    grid-template-columns: 48px 48px 48px;
     gap: 48px;
-    position: absolute;
-    Width: 240px;
-    Height: 48px;
-    top: 1px;
-    left: 810px;
     list-style: none;
+    justify-content: center;
+    align-items: start;
 }
 
 .footer__social img {
