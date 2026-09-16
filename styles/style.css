@@ -405,7 +405,6 @@ address a {
   text-decoration-thickness: 1px;
   text-decoration-skip-ink: none;
   text-underline-offset: 3px;
-  line-height: 22px;
 }
 
 .footer__menu-link_no-underline {
